@@ -1,0 +1,26 @@
+{
+  "name": "t-stream",
+  "version": "0.0.0",
+  "homepage": "https://github.com/rshaikh/t-stream",
+  "authors": [
+    "rashid <rshaikh@equalexperts.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "angular": "~1.3.15",
+    "angular-route": "~1.3.15",
+    "angular-mocks": "~1.3.15"
+  }
+}

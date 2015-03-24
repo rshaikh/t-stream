@@ -1,20 +1,23 @@
 {
   "name": "t-stream",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.12.0",
-    "cookie-parser": "~1.3.4",
-    "debug": "~2.1.1",
-    "express": "~4.12.2",
-    "jade": "~1.9.2",
-    "morgan": "~1.5.1",
-    "serve-favicon": "~2.2.0"
+  "main": "app://host/src/index.html",
+  "window": {
+    "toolbar": true,
+    "width": 800,
+    "height": 600
   },
   "devDependencies": {
-    "torrent-stream": "^0.18.0"
+    "bootstrap": "^3.3.4",
+    "jasmine-core": "^2.2.0",
+    "jquery": "^2.1.3",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "karma-mocha": "^0.1.10",
+    "karma-requirejs": "^0.2.2",
+    "karma-sinon": "^1.0.4",
+    "mocha": "^2.2.1",
+    "requirejs": "^2.1.16",
+    "sinon": "^1.14.1"
   }
 }
