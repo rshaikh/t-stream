@@ -13,9 +13,10 @@ var phonecatApp = angular.module('phonecatApp', ['ngRoute','phonecatControllers'
             when('/phones/:phoneId', {
                 templateUrl: 'partials/phone-detail.html',
                 controller: 'PhoneDetailCtrl'
-            }).
-            otherwise({
-                redirectTo: '/phones'
+            }).when('/home', {
+                templateUrl: 'partials/home.html'
+            }).otherwise({
+                redirectTo: '/home'
             });
     }
 );

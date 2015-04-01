@@ -29,4 +29,5 @@ node_modules
 
 .idea/
 nwjs-v0.12.0-osx-x64/
+nwjs/
 bower_components/
