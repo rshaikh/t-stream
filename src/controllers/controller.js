@@ -15,29 +15,15 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
         $scope.phoneId = $routeParams.phoneId;
 }]);
 
-phonecatControllers.controller('SearchCtrl', ['$scope', '$routeParams',
-    function($scope, $routeParams) {
+phonecatControllers.controller('SearchCtrl', ['$scope', '$routeParams', 'torrentService',
+    function($scope, $routeParams, torrentService) {
         $scope.magnet = decodeURIComponent($routeParams.magnet);
         var onGetFiles = function(files){
-                    $scope.files = files;
-                    $scope.dataLoaded = true;
-                    $scope.$apply();
+            $scope.files = files;
+            $scope.dataLoaded = true;
+            $scope.$apply();
         };
+
         $scope.dataLoaded = false;
-        getFiles($scope.magnet, onGetFiles);
+        torrentService.getFiles($scope.magnet, onGetFiles);
 }]);
-
-var getFiles = function(magnet, callback){
-            var files = [];
-            var torrentStream = require('torrent-stream');
-
-            var engine = torrentStream(magnet);
-
-            engine.on('ready', function() {
-                engine.files.forEach(function(file) {
-                    console.log('filename:', file.name);
-                    files.push(file);
-                });
-                callback(files);
-            });
-        }
