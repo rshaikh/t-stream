@@ -1,4 +1,4 @@
-var phonecatApp = angular.module('phonecatApp', ['ngRoute','phonecatControllers']).config(
+var phonecatApp = angular.module('phonecatApp', ['rt.encodeuri','ngRoute','phonecatControllers']).config(
     function($compileProvider, $routeProvider)
     {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|app):/);
@@ -15,6 +15,9 @@ var phonecatApp = angular.module('phonecatApp', ['ngRoute','phonecatControllers'
                 controller: 'PhoneDetailCtrl'
             }).when('/home', {
                 templateUrl: 'partials/home.html'
+            }).when('/search/:magnet', {
+                templateUrl: 'partials/search.html',
+                controller: 'SearchCtrl'
             }).otherwise({
                 redirectTo: '/home'
             });

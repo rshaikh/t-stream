@@ -1,0 +1,11 @@
+<div ng-hide="dataLoaded">
+    <p class="text-center">
+        <img src="assets/images/loading_spinner.gif" alt="loading..."/>
+    </p>
+</div>
+
+<div ng-show="dataLoaded">
+    <div ng-repeat="file in files | orderBy:'name'">
+        <p>{{file.name}}</p>
+    </div>
+</div>
