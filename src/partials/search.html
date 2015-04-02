@@ -5,7 +5,18 @@
 </div>
 
 <div ng-show="dataLoaded">
-    <div ng-repeat="file in files | orderBy:'name'">
-        <p>{{file.name}}</p>
-    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>File Name</th>
+            <th>Size</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="file in files | orderBy:'name'" ng-click="play()">
+            <td>{{file.name}}</td>
+            <td>{{file.length / 1024 / 1024 | number:2}} MB</td>
+        </tr>
+        </tbody>
+    </table>
 </div>

@@ -20,5 +20,8 @@
     "requirejs": "^2.1.16",
     "sinon": "^1.14.1",
     "torrent-stream": "~0.18.1"
+  },
+  "dependencies": {
+    "restify": "~3.0.1"
   }
 }
